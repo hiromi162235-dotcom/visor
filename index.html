@@ -1140,7 +1140,7 @@ function speak(text, ambient) {
   try {
     speechSynthesis.cancel();
     const x = new SpeechSynthesisUtterance(text);
-    x.lang = 'ja-JP'; if (voiceJa) x.voice = voiceJa; x.rate = 1.08; x.pitch = 0.88;
+    x.lang = 'ja-JP'; if (voiceJa) x.voice = voiceJa; x.rate = 1.6; x.pitch = 0.9;
     x.onstart = () => { speaking = true; }; x.onend = x.onerror = () => { speaking = false; };
     speechSynthesis.speak(x);
   } catch (e) {}
